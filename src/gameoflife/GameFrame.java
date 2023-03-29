@@ -46,7 +46,7 @@ public class GameFrame extends JFrame{
     public void panelKeyPressed(KeyEvent e){
         if(e.getKeyCode() == KeyEvent.VK_SPACE){           
             panel.setConditionRun();
-        }
+        }        
     }
         
 }
