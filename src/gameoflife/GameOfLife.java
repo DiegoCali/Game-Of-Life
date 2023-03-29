@@ -10,13 +10,14 @@ package gameoflife;
  */
 public class GameOfLife {
 
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // TODO code application logic here    
         GameFrame newGame = new GameFrame();
         newGame.setVisible(true);
     }
-    
+        
 }
