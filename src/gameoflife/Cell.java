@@ -101,5 +101,22 @@ public class Cell {
 
     public ArrayList<Cell> getNearbyCells() {
         return nearbyCells;
-    }        
+    } 
+    
+    public void updateCondition(Graphics g){
+        if(this.isAlive()){
+            if(this.counter == 2 || this.counter == 3){
+                this.alive = true;
+                changeColor(g);
+            }else if(counter > 3 || counter <= 1){
+                this.alive = false;
+                changeColor(g);
+            }
+        }else{
+            if(counter == 3){
+                this.alive = true;
+                changeColor(g);
+            }
+        }
+    }
 }

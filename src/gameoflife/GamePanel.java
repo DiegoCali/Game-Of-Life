@@ -13,7 +13,7 @@ import java.util.logging.Logger;
  * @author Usuario
  */
 public class GamePanel extends JPanel{
-    static final int SCREEN_WIDTH = 600;
+    static final int SCREEN_WIDTH = 1200;
     static final int SCREEN_HEIGHT = 600;
     static final int UNIT_SIZE = 25;        
     public static ArrayList<Cell> cells = new ArrayList<>();
@@ -24,10 +24,13 @@ public class GamePanel extends JPanel{
         public void run() {
             while (running) { 
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(100);
                     for(Cell cell: cells){
-                        cell.updateNearbyCells();                        
+                        cell.updateNearbyCells();                         
                     }                    
+                    for (Cell cell : cells) {
+                        cell.updateCondition(grafs);
+                    }
                 } catch (InterruptedException ex) {
                     System.out.println(ex);
                 }                
