@@ -120,5 +120,11 @@ public class GamePanel extends JPanel{
             hilo.suspend();
         }
     }
-        
+    public void reiniciar(Graphics g){        
+        for(Cell cell: cells){
+            cell.setReinit(g);
+        }
+        this.running = false;
+        startGameOfLife();
+    }  
 }

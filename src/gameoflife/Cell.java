@@ -62,7 +62,12 @@ public class Cell {
     }
 
     public void setAlive(boolean alive) {
-        this.alive = alive;
+        this.alive = alive;                
+    }
+    
+    public void setReinit(Graphics g){
+        this.alive = false;
+        changeColor(g);
     }
 
     public boolean isAlive() {
