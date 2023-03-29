@@ -6,8 +6,6 @@ package gameoflife;
 import java.awt.*;
 import javax.swing.*;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 /**
  *
  * @author Usuario
@@ -17,7 +15,7 @@ public class GamePanel extends JPanel{
     static final int SCREEN_HEIGHT = 600;
     static final int UNIT_SIZE = 25;        
     public static ArrayList<Cell> cells = new ArrayList<>();
-    public boolean running;
+    public boolean running; //if pressed SPACE -> !runnig
     private Graphics grafs;    
     private Thread hilo = new Thread(new Runnable() {
         @Override
