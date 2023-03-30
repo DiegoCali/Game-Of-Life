@@ -71,12 +71,12 @@ public class GamePanel extends JPanel{
         for(Cell cell: cells){
             double[] cellCenter = cell.getCenter();
             for(Cell nearby: cells){
-                //lados
+                //Sides
                 boolean rightCell = nearby.isTouching(cellCenter[0] + 25, cellCenter[1]);
                 boolean leftCell = nearby.isTouching(cellCenter[0] - 25, cellCenter[1]);
                 boolean upperCell = nearby.isTouching(cellCenter[0], cellCenter[1] - 25);
                 boolean lowerCell = nearby.isTouching(cellCenter[0], cellCenter[1] + 25);
-                //diagonales
+                //Diagonal Sides
                 boolean firstSide = nearby.isTouching(cellCenter[0] + 25, cellCenter[1] + 25);
                 boolean secondSide = nearby.isTouching(cellCenter[0] - 25, cellCenter[1] + 25);
                 boolean thirdSide = nearby.isTouching(cellCenter[0] + 25, cellCenter[1] - 25);
@@ -120,7 +120,7 @@ public class GamePanel extends JPanel{
             hilo.suspend();
         }
     }
-    public void reiniciar(Graphics g){        
+    public void restart(Graphics g){        
         for(Cell cell: cells){
             cell.setReinit(g);
         }

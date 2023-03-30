@@ -48,7 +48,7 @@ public class GameFrame extends JFrame{
             panel.setConditionRun();
         }
         if(e.getKeyCode() == KeyEvent.VK_R){
-            panel.reiniciar(panel.getGraphics());
+            panel.restart(panel.getGraphics());
         }
     }
         
